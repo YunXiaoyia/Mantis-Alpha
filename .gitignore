@@ -1,0 +1,38 @@
+﻿# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches & IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.cache/
+
+# Data & Datasets (store remotely or link in README)
+data/
+datasets/
+*.hdf5
+*.zarr
+*.mp4
+
+# Model weights & Checkpoints (upload to Hugging Face Model Hub)
+outputs/
+checkpoints/
+models/
+*.safetensors
+*.pt
+*.pth
+*.bin
+*.onnx
+
+# Evaluation logs
+eval_logs/
+logs/
+*.log
+
+# Build & distribution
+dist/
+build/
+*.egg-info/

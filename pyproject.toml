@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mantis-alpha"
+version = "0.2.0"
+description = "Mantis-Alpha: standalone SmolVLA Vision-Language-Action policy stack (no LeRobot dependency)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "Embodied AI Researcher"}
+]
+keywords = ["robotics", "embodied-ai", "vla", "smolvla", "smolvlm", "flow-matching", "libero"]
+dependencies = [
+    "torch>=2.5.0",
+    "torchvision>=0.20.0",
+    "transformers>=5.4.0,<5.6",
+    "safetensors>=0.4.2",
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "pyarrow>=14.0.0",
+    "pillow>=10.0.0",
+    "tqdm>=4.66.0",
+]
+
+[project.optional-dependencies]
+server = [
+    "fastapi>=0.110.0",
+    "uvicorn>=0.28.0",
+]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
